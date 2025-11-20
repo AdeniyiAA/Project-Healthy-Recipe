@@ -9,25 +9,37 @@
 </head>
 <body>
   <nav>
-    <div class="innerNav genLayout">
-        <h1><a href="#">healthy recipe finder</a></h1>
+  <div class="innerNav genLayout">
 
-        <div class="navLinks">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Recipes</a>
-        </div>
+    <h1><a href="#">healthy recipe finder</a></h1>
 
-        <button class="btn">Browse recipes</a></button>
+    <!-- Hidden checkbox -->
+    <input type="checkbox" id="menu-toggle" />
+
+    <!-- Hamburger icon -->
+    <label for="menu-toggle" class="hamburger">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </label>
+
+    <!-- Navigation links -->
+    <div class="navLinks">
+      <a href="./index.html">Home</a>
+      <a href="./index.html">About</a>
+      <a href="./index.html">Recipes</a>
     </div>
-  </nav>
+
+    <button class="btn">Browse recipes</button>
+
+  </div>
+</nav>
+
     
 
     <main>
         <section>
             <div class="banner genLayout">
                 <h1>Healthy meals, zero fuss</h1>
-                <p>Discover eight quick, whole-food recipes that ypu can cook tonight </p>
+                <p>Discover eight quick, whole-food recipes that you can cook tonight </p>
                 <p>-no processed junk, no guesswork</p>
                 <button class="btn1">Start Exploring</button>
 
@@ -58,11 +70,10 @@
             <div class="banner2 genLayout">
                 <div class="built">
                     <h2>Built for real life</h2>
-                    <p>Cooking should'nt be complicated. These recipes come in <br>
-                    under <b>30 minutes</b> of active time, fit busy schedules, and <br>
+                    <p>Cooking should'nt be complicated. These recipes come in 
+                    under 30 minutes of active time, fit busy schedules, and 
                     taste good enough to repeat. <br>
-                    <br>
-                    Whether you're new to the kitchen or just need fresh <br>
+                    Whether you're new to the kitchen or just need fresh
                     ideas, we've got you covered.</p>
                 </div>
                 <div class="builtImg">
@@ -79,14 +90,23 @@
                     <h5>Made with <span style="color: red;"><i class="fa fa-heart" aria-hidden="true"></i></span> and <span style="color: green;"><i class="fa fa-lemon-o" aria-hidden="true"></i></span></h5>
                 </div>
                 <div class="links">
-                    <a href="#"><span style="color: #00523f;"><i class="fa fa-instagram" aria-hidden="true"></i></span></a>
-                    <a href="#"><span style="color: #00523f;"><i class="fa fa-twitter" aria-hidden="true"></i></span></a>
-                    <a href="#"><span style="color: #00523f;"><i class="fa fa-twitch" aria-hidden="true"></i></span></a>
+                    <a href="./index.html"><span style="color: #00523f;"><i class="fa fa-instagram" aria-hidden="true"></i></span></a>
+                    <a href="./index.html"><span style="color: #00523f;"><i class="fa fa-twitter" aria-hidden="true"></i></span></a>
+                    <a href="./index.html"><span style="color: #00523f;"><i class="fa fa-twitch" aria-hidden="true"></i></span></a>
                 </div>
             </div>
         </section>
     </main>
 
 
+
+    <script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 </body>
 </html>
